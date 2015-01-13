@@ -41,8 +41,8 @@ $(document).ready(function(){
 	function hintShow(){
 		if(confirm("You will lose one of your wrong tries!")){
 			wrongTriesAllowed-=1;
+      alert("The hint is: "+hint);  
 		}
-		alert("The hint is: "+hint);	
 	}
 		  
 	function validate(event){
