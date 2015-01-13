@@ -21,14 +21,15 @@
   <script>
    $(document).ready(function() {
    $("#playButton").click(function(){
-	var player_name=prompt("Enter your name:","G33k");
-        //window.location.href="play.html";
-	if(player_name!=''){
-		window.location.href+="/play.html?name="+player_name;
-	}
-        else
-		window.location.href="#";
-   })});
+	 var player_name=prompt("Enter your name:","G33k");
+   //window.location.href="play.html";
+	 if(player_name === null || player_name === undefined || player_name === ''){
+		//Do Nothing
+	 }
+   else{
+		 window.location.href+="play.html?name="+player_name;
+   }
+  })});
 	  
 
   </script>

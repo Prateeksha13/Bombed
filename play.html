@@ -41,8 +41,8 @@ $(document).ready(function(){
 	function hintShow(){
 		if(confirm("You will lose one of your wrong tries!")){
 			wrongTriesAllowed-=1;
+      alert("The hint is: "+hint);  
 		}
-		alert("The hint is: "+hint);	
 	}
 		  
 	function validate(event){
@@ -142,12 +142,15 @@ $(document).ready(function(){
       font-family: 'Gloria Hallelujah', cursive;
       text-align:center;
     }
+    #buttonPanel{
+      display:flex;
+    }
     #hin{
-      
+      flex:5;
       left:0;
     }
     #nex{
-      position:absolute;
+      flex:1;
       right:0;
     }
     #game{
