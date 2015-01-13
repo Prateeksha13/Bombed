@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+  <title>Bombed</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/j.css">
+  
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+  
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="/bower_components/webcomponentsjs/webcomponents.js"></script>
+  <link rel="import" href="/bower_components/paper-input/paper-input.html">
+  <link rel="import" href="/bower_components/paper-button/paper-button.html">
+  <link rel="import" href="/bower_components/core-label/core-label.html">
+  <link rel="import" href="/bower_components/core-toolbar/core-toolbar.html">
+  <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+
+  <script>
+   $(document).ready(function() {
+   $("#playButton").click(function(){
+	var player_name=prompt("Enter your name:","G33k");
+        //window.location.href="play.html";
+	if(player_name!=''){
+		window.location.href+="/play.html?name="+player_name;
+	}
+        else
+		window.location.href="#";
+   })});
+	  
+
+  </script>
+
+  <style>
+    body{
+      background: url(http://wpstudent.gc.ac.nz/wp-content/uploads/2012/07/marisa-lerin-solid-red-paper-asset.jpg);
+      background-repeat: no-repeat;
+    }
+    #header{ 
+      color: white; 
+      font-family: 'Gloria Hallelujah', cursive; 
+      text-align:center;
+      font-size:72pt;
+    }
+    span{
+      color: white; 
+      font-family: 'Gloria Hallelujah', cursive; 
+      text-align:center;
+      font-size:72pt;
+    }
+    #canvasDiv{
+      height:1000px;
+    }
+    #Body{
+      display:flex;
+      flex:1;
+    }
+    paper-button{
+      font-family: 'Gloria Hallelujah', cursive;
+      font-size:40pt;
+      color:white;
+    }
+    #button{
+      display:flex;
+    }
+    #play{
+      border:2pt solid white;
+    }
+    #howto{
+      flex:1;
+    }
+    #howtoButton{
+      position:absolute;
+      right:0;
+    }
+    #bomb{
+      border-radius:5%;
+    }
+    #playButton{
+      background:url(images/black_bomb_thumb);
+      background-repeat:no-repeat;
+      background-position:center;
+      padding: 1.7em 0.57em;
+    }
+    #howtoButton{
+      background:url(images/black_bomb_thumb);
+      background-repeat:no-repeat;
+      background-position:center;
+      padding: 1.7em 0.57em;
+   }
+
+     
+  </style>
+
+  <script>
+  </script>
+
+</head>
+
+<body unresolved>
+  <div id="header" flex=""><strong><span>B<img src="images/black_bomb_thumb">MBED</span></strong></div>
+  <div id="cover"> 
+<center> 
+    <img id="bomb" src="https://38.media.tumblr.com/tumblr_m6fub5UObl1rwcc6bo1_500.gif"> 
+</center>
+  </div>
+  <div id="button">
+    <paper-button id="playButton"></paper-button>
+    <paper-button id="howtoButton" onclick="location.href='how.html'"></paper-button>
+  </div>  
+</body>
+</html>
